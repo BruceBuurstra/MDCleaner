@@ -2,7 +2,7 @@ Package: MDCleaner
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 1.0.0
-Author: Bruce Buurstra, Madan K C, Rashmita Vaggu
+Author: Bruce Buurstra, Madan K C, Rashmita Vaggu, Durga saranya tummalapalli
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
