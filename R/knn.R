@@ -1,8 +1,8 @@
 library(readr)
 library(tidyverse)
 
-# ratings <- read_csv("~/MDCleaner/ratings_wide.csv"
-ratings <- read_csv("/Users/madankc/MDCleaner/ratings_wide.csv")
+ratings <- read_csv("~/MDCleaner/ratings_wide.csv"
+# ratings <- read_csv("/Users/madankc/MDCleaner/ratings_wide.csv")
 ratings <- data.frame(ratings)
 
 #Function to drop the columns having 95% or more mising values.
