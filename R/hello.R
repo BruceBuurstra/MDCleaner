@@ -39,3 +39,5 @@ assign('ratings_wide', ratings_wide, envir = .GlobalEnv)
 }
 
 row_remover(0.00226)
+print(nrow(ratings_wide))
+print(ncol(ratings_wide))
