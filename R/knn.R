@@ -29,6 +29,23 @@ assign('ratings_wide', ratings_wide, envir = .GlobalEnv)
 drop_columns()
 row_remover(0.00226)
 
-#view(drop_columns())
 print(nrow(ratings_wide))
 print(ncol(ratings_wide))
+
+#imputing the missing values using kNN 
+ratings_knn <- kNN(ratings_wide)
+
+# Dimension Reduction --Start
+ratings_matrix <- as.matrix(ratings_knn)
+rating_sparsematrix <- as(ratings_matrix, "sparseMatrix")
+library(singlet)
+
+#Normalizing the data
+normalized_data <- rating_sparsematrix
+view(normalized_data)
+normalized_data <- Seurat::LogNormalize(normalized_data)
+view(normalized_data)
+
+nmf_model_data <- ard_nmf(normalized_data)
+
+# Dimension Reduction --End
