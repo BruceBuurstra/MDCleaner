@@ -236,7 +236,7 @@ run_knn_movies_clustering <- function(v){
 run_knn_movies_clustering(2)
 
 get_knn_clustered_data <- function(){
-  movies <- t(nmf@h)
+  movies <- t(ratings_wide)
   knn_movies <- t(ratings_knn_imputed)
   knn_kmeansClusters <- factor(knn_kmeans$cluster)
 
