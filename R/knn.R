@@ -6,6 +6,7 @@
 #library(pkgdown)
 #library(usethis)
 #library(magrittr)
+#' @importFrom purrr discard
 #ratings_wide <- read_csv("MDCleaner/ratings_wide.csv")
 #ratings_wide <- ratings_wide %>% select(-`userId`)
 
