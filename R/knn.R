@@ -157,9 +157,9 @@ run_knn_imputation <- function(n) {
 
   ratings_knn_imputed <- ratings_wide_m
   for (i in 1:ncol(ratings_knn_imputed)){
-    dist <- euclidean_matrix[-i, i]
-    distances <- sort(dist)[1:5]
-    neighbor_ind <- which(dist %in% sort(dist)[1:n])
+    dist <- euclidean_matrix[-i,i]
+    distances <- sort(dist)[1:n]
+    neighbor_ind = which(dist %in% sort(dist)[1:n])
     ret <-  list(neighbor_ind, distances)
     list <- c(unlist(ret[1]))
     print(i)
@@ -216,8 +216,8 @@ run_knn_movies_clustering <- function(v) {
 
 run_knn_movies_clustering(2)
 
-get_knn_clustered_data <- function() {
-  movies <- t(nmf@h)
+get_knn_clustered_data <- function(){
+  movies <- t(ratings_wide)
   knn_movies <- t(ratings_knn_imputed)
   knn_kmeansClusters <- factor(knn_kmeans$cluster)
 
