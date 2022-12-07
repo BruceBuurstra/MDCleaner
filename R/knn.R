@@ -1,3 +1,12 @@
+#' @title Movie Lens Data cleaning
+#' @author Bruce, Madan code
+#' @author project documentation Durga tummalapalli
+#' @author  Vignette package Rashmita
+#' @description The project is about movie lens data cleaning and imputing missing values using K Nearest Neighbors
+#' @docType package
+#' @aliases MDCleaner_Package
+#' @param  drop_column function is used to remove the values less than the Threshold which is 95%
+#' @param drop_rows function drops the rows having 75% or more missing values in dataset # nolint
 #library(readr)
 #library(tidyverse)
 #library(Matrix)
